@@ -1,0 +1,5 @@
+[client]
+user = user_tmp
+password = password_tmp
+host = host_tmp
+port = port_tmp
