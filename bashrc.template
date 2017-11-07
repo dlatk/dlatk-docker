@@ -18,3 +18,4 @@ alias l='ls $LS_OPTIONS -lA'
 # alias mv='mv -i'
 
 export DLATK_DIR=dlatk_dir_tmp
+set +H
