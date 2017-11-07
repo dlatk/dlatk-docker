@@ -18,6 +18,14 @@ The following variables can be overridden in the DLATK docker container allowing
 * `MYSQL_HOST`: IP/Host of the server.
 * `MYSQL_PORT`: Port of the server (e.g. `3306`).
 
+## Loading the sample datasets
+If following [the tutorial](http://dlatk.wwbp.org/tutorials/tut_dla.html) you'll need run the following to load the sample data:
+
+```sql
+mysql < $DLATK_DIR/data/dla_tutorial.sql
+mysql < $DLATK_DIR/data/permaLexicon.sql
+```
+
 ## TODO
 * Create a `docker-compose.yml`.
 * Optionally allow for the IBM Wordcloud jar to be utilized.
