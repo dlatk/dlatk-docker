@@ -1,13 +1,15 @@
 # dlatk-docker
-Docker container for the Differential Language Analysis ToolKit.
+Docker container for the Differential Language Analysis ToolKit. 
+
+## Installation
+Full install instructions are available [here](http://dlatk.wwbp.org/tutorials/tut_docker.html). DLATK container available at [DockerHub](https://hub.docker.com/r/dlatk/dlatk/).
 
 ## Example usage
 Starts a mysql docker container and then builds and runs the DLATK container; linking the two containers together. See https://hub.docker.com/_/mysql/ for more info on the MySQL container.
 
 ```bash
-docker run --name mysql-8 -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:8
-docker build -t dlatk-docker .
-docker run -it --rm --name dlatk-test --link mysql-8:mysql dlatk-docker bash
+docker run --name mysql_v5 -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.5
+docker run -it --rm --name dlatk_docker_test --link mysql_v5:mysql dlatk/dlatk bash
 ```
 
 ## Variables
@@ -25,6 +27,9 @@ If following [the tutorial](http://dlatk.wwbp.org/tutorials/tut_dla.html) you'll
 mysql < $DLATK_DIR/data/dla_tutorial.sql
 mysql < $DLATK_DIR/data/permaLexicon.sql
 ```
+
+## Acknowledgment
+The DockerFile was originally written by [Michael Becker](https://github.com/mdbecker>) at Penn Medicine.
 
 ## TODO
 * Create a `docker-compose.yml`.
