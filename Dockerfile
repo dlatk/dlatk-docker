@@ -1,5 +1,5 @@
-FROM python:stretch
-MAINTAINER Michael Becker
+FROM python:3.6-stretch
+MAINTAINER Salvatore Giorgi
 
 ENV PYTHONUNBUFFERED 1
 
